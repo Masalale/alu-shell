@@ -1,35 +1,33 @@
 # Shell I/O Redirections and Filters
 
-A collection of shell scripts exploring input/output redirection and text processing in Linux. These scripts demonstrate various ways to manipulate files, handle text streams, and use filter commands.
+Welcome! This repository contains bash scripts demonstrating Shell I/O redirections and filters in Linux. Each script showcases different aspects of input/output handling and text processing.
 
-### Basic File Operations
-- Want to say hello? Run `0-hello_world`
-- Need to print a confused face? Try `1-confused_smiley` 
-- View system files with `2-hellofile` and `3-twofiles`
-- Peek at file contents using `4-lastlines` and `5-firstlines`
-- Extract specific lines with `6-third_line`
+## Script Descriptions
 
-### File Management
-- Create special filenames using `7-file`
-- Save directory listings with `8-cwd_state`
-- Duplicate content using `9-duplicate_last_line`
-- Clean up those pesky .js files with `10-no_more_js`
-- Count directories with `11-directories`
-- Find recent files using `12-newest_files`
-
-### Text Processing Magic
-- Find unique words with `13-unique`
-- Search for patterns using `14-findthatword` and `15-countthatword`
-- Look around patterns with `16-whatsnext`
-- Filter out content with `17-hidethisword`
-- Work with letters using `18-letteronly`
-- Replace characters with `19-AZ`
-- Remove specific letters using `20-hiago`
-- Reverse text with `21-reverse`
-- List user info using `22-users_and_homes`
-
-### Advanced Stuff
-- Find empty items with `23-empty_casks`
-- Handle GIF files using `24-gifs`
-- Decode hidden messages with `25-acrostic`
-- Analyze logs using `26-the_biggest_fan`
+* `0-hello_world` - Prints "Hello, World" to standard output
+* `1-confused_smiley` - Displays a confused smiley "(Ôo)'
+* `2-hellofile` - Displays content of /etc/passwd
+* `3-twofiles` - Displays content of /etc/passwd and /etc/hosts
+* `4-lastlines` - Displays last 10 lines of /etc/passwd
+* `5-firstlines` - Displays first 10 lines of /etc/passwd
+* `6-third_line` - Displays third line of the file iacta
+* `7-file` - Creates a file containing text
+* `8-cwd_state` - Writes result of ls -la into ls_cwd_content
+* `9-duplicate_last_line` - Duplicates last line of file iacta
+* `10-no_more_js` - Deletes all regular .js files in current directory and subfolders
+* `11-directories` - Counts number of directories and sub-directories
+* `12-newest_files` - Displays 10 newest files in current directory
+* `13-unique` - Takes a list of words and prints only words that appear exactly once
+* `14-findthatword` - Displays lines containing "root" from /etc/passwd
+* `15-countthatword` - Displays number of lines containing "bin" in /etc/passwd*
+* `16-whatsnext` - Displays lines containing "root" and 3 lines after them
+* `17-hidethisword` - Displays lines not containing "bin" in /etc/passwd
+* `18-letteronly` - Displays all lines starting with a letter
+* `19-AZ` - Replaces A and c with Z and e respectively
+* `20-hiago` - Removes all letters c and C from input
+* `21-reverse` - Reverses input
+* `22-users_and_homes` - Displays all users and their home directories
+* `23-empty_casks` - Finds all empty files and directories
+* `24-gifs` - Lists all .gif files
+* `25-acrostic` - Decodes acrostic puzzles
+* `26-the_biggest_fan` - Parses web server logs and displays top 11 hosts/IPs

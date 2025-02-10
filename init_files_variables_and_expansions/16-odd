@@ -1,0 +1,3 @@
+#!/bin/bash
+awk 'NR % 2 == 1' 
+grep -n "" | grep [13579]:
