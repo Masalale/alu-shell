@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script that displays "To infinity and beyond" indefinitely with 2s delay
 
 while true
