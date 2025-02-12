@@ -25,20 +25,17 @@ stop_process() {
 case "$1" in
     start)
         start_process
-        echo "Good"
         ;;
     stop)
         stop_process
-        echo "Good"
         ;;
     restart)
         stop_process "restart"
         start_process "restart"
         echo "manage_my_process restarted"
-        echo "Good"
         ;;
     *)
-        echo "Usage: manage_your_process {start|stop|restart}"
+        echo "Usage: manage_my_process {start|stop|restart}"
         exit 1
         ;;
 esac
