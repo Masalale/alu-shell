@@ -6,7 +6,9 @@ PIDFILE="/var/run/my_process.pid"
 start_process() {
     ./manage_my_process &
     echo "$!" > "$PIDFILE"
-    echo "manage_my_process started"
+    if [ "$1" != "restart" ]; then
+        echo "manage_my_process started"
+    fi
 }
 
 stop_process() {
@@ -15,10 +17,12 @@ stop_process() {
         kill "$pid"
         rm "$PIDFILE"
     fi
-    echo "manage_my_process stopped"
+    if [ "$1" != "restart" ]; then
+        echo "manage_my_process stopped"
+    fi
 }
 
-case "$1" in 
+case "$1" in
     start)
         start_process
         ;;
@@ -26,14 +30,12 @@ case "$1" in
         stop_process
         ;;
     restart)
-        stop_process
-        start_process
+        stop_process "restart"
+        start_process "restart"
         echo "manage_my_process restarted"
         ;;
     *)
-        echo "Usage: manage_my_process {start|stop|restart}"
+        echo "Usage: $0 {start|stop|restart}"
         exit 1
         ;;
 esac
-
-exit 0
