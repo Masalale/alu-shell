@@ -4,6 +4,6 @@
 for pid in /proc/[0-9]*; do
     pid=${pid##*/}
     if [ -f "/proc/$pid/comm" ] && grep -q "bash" "/proc/$pid/comm"; then
-        echo "$pid $(cat /proc/$pid/comm)"
+        echo "$pid $(cat /proc/"$pid"/comm)"
     fi
 done
